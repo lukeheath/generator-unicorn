@@ -1,13 +1,13 @@
 {
   "name": "generator-unicorn",
-  "version": "0.0.0",
-  "description": "Yeoman generator for the Unicorn web app starter seed",
+  "version": "0.0.1",
+  "description": "Yeoman generator for the Unicorn Sails/Angular starter seed.",
   "license": "MIT",
   "main": "app/index.js",
   "repository": "https://github.com/lukeheath/generator-unicorn",
   "author": {
     "name": "Luke Heath",
-    "email": "",
+    "email": "luke@lukeheath.com",
     "url": "https://github.com/lukeheath"
   },
   "scripts": {
@@ -17,7 +17,12 @@
     "generators"
   ],
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "unicorn",
+    "seed",
+    "sails",
+    "angular",
+    "treeline"
   ],
   "dependencies": {
     "colors": "^1.1.0",

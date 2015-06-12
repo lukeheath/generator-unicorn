@@ -7,7 +7,7 @@ var colors = require('colors');
 var yosay = require('yosay');
 var generateName = require('sillyname');
 var sillyName = generateName().split(' ');
-var thisUnicornName = sillyName[0];
+var defaultUnicornName = sillyName[0];
 
 // Material Design Color Palette
 var colorPalette = {
@@ -388,7 +388,7 @@ var UnicornGenerator = yeoman.generators.Base.extend({
       type: 'input',
       name: 'unicornName',
       message: 'What is the name of your unicorn?',
-      default: thisUnicornName
+      default: defaultUnicornName
     },{
       type: 'list',
       name: 'primaryColor',
@@ -442,134 +442,132 @@ var UnicornGenerator = yeoman.generators.Base.extend({
         }
       };
 
-      console.log("user? ", user);
-
       done();
     }.bind(this));
-  }
+  },
 
   /**
    * Write files to disk
    */
-  // write: function() { 
+  write: function() { 
 
-  //   // Copy config files
-  //   this.copy('.bowerrc', '.bowerrc');
-  //   this.copy('.editorconfig', '.editorconfig');
-  //   this.copy('.gitignore', '.gitignore');
-  //   this.copy('.sailsrc', '.sailsrc');
-  //   this.copy('app.js', 'app.js');
-  //   this.copy('bower.json', 'bower.json');
-  //   this.copy('Gruntfile.js', 'Gruntfile.js');
-  //   this.copy('package.json', 'package.json');
-  //   this.copy('README.md', 'README.md');
+    // Copy config files
+    this.copy('.bowerrc', '.bowerrc');
+    this.copy('.editorconfig', '.editorconfig');
+    this.copy('.gitignore', '.gitignore');
+    this.copy('.sailsrc', '.sailsrc');
+    this.copy('app.js', 'app.js');
+    this.copy('bower.json', 'bower.json');
+    this.copy('Gruntfile.js', 'Gruntfile.js');
+    this.copy('package.json', 'package.json');
+    this.copy('README.md', 'README.md');
  
-  //   // Prepare the template context for yeoman
-  //   var context = {
-  //     unicorn: {
-  //       name: this.unicornName,
-  //       color: this.colors
-  //     }
-  //   };
+    // Prepare the template context for yeoman
+    var context = {
+      unicorn: {
+        name: this.unicornName,
+        color: this.colors
+      }
+    };
     
-  //   // Set lowercase module name based on unicorn's name
-  //   context.unicorn.module = this.unicornName.toLowerCase();
+    // Set lowercase module name based on unicorn's name
+    context.unicorn.module = this.unicornName.toLowerCase();
 
-  //   // Define lodash _.templateSettings. 
-  //   // We're using {{ }} as the Uniocrn template delimiter. 
-  //   // This allows Sails' <% %> delimiter to remain for Sails parsing later on.
-  //   var templateSettings = {
-  //     evaluate:    /{#([\s\S]+?)#}/g,
-  //     interpolate: /{#=([\s\S]+?)#}/g,
-  //     escape:      /{#-([\s\S]+?)#}/g
-  //   }
+    // Define lodash _.templateSettings. 
+    // We're using {{ }} as the Uniocrn template delimiter. 
+    // This allows Sails' <% %> delimiter to remain for Sails parsing later on.
+    var templateSettings = {
+      evaluate:    /{#([\s\S]+?)#}/g,
+      interpolate: /{#=([\s\S]+?)#}/g,
+      escape:      /{#-([\s\S]+?)#}/g
+    }
 
-  //   // Process Sails API folder as template
-  //   this.fs.copyTpl(
-  //     this.templatePath('/api/'),
-  //     this.destinationPath('/api/'),
-  //     context,
-  //     templateSettings
-  //   );
+    // Process Sails API folder as template
+    this.fs.copyTpl(
+      this.templatePath('/api/'),
+      this.destinationPath('/api/'),
+      context,
+      templateSettings
+    );
 
-  //   // Process Sails config folder as template
-  //   this.fs.copyTpl(
-  //     this.templatePath('/config/'),
-  //     this.destinationPath('/config/'),
-  //     context,
-  //     templateSettings
-  //   );
+    // Process Sails config folder as template
+    this.fs.copyTpl(
+      this.templatePath('/config/'),
+      this.destinationPath('/config/'),
+      context,
+      templateSettings
+    );
 
-  //   // Process grunt tasks folder as template
-  //   this.fs.copyTpl(
-  //     this.templatePath('/tasks/'),
-  //     this.destinationPath('/tasks/'),
-  //     context,
-  //     templateSettings
-  //   );
+    // Process grunt tasks folder as template
+    this.fs.copyTpl(
+      this.templatePath('/tasks/'),
+      this.destinationPath('/tasks/'),
+      context,
+      templateSettings
+    );
 
-  //   // Process Sails/EJS views folder as template
-  //   this.fs.copyTpl(
-  //     this.templatePath('/views/'),
-  //     this.destinationPath('/views/'),
-  //     context,
-  //     templateSettings
-  //   );
+    // Process Sails/EJS views folder as template
+    this.fs.copyTpl(
+      this.templatePath('/views/'),
+      this.destinationPath('/views/'),
+      context,
+      templateSettings
+    );
 
-  //   // Process assets folder as template
+    // Process assets folder as template
 
-  //   this.fs.copyTpl(
-  //     this.templatePath('/assets/js/'),
-  //     this.destinationPath('/assets/js/'),
-  //     context,
-  //     templateSettings
-  //   );
+    this.fs.copyTpl(
+      this.templatePath('/assets/js/'),
+      this.destinationPath('/assets/js/'),
+      context,
+      templateSettings
+    );
 
-  //   this.fs.copyTpl(
-  //     this.templatePath('/assets/styles/'),
-  //     this.destinationPath('/assets/styles/'),
-  //     context,
-  //     templateSettings
-  //   );
+    this.fs.copyTpl(
+      this.templatePath('/assets/styles/'),
+      this.destinationPath('/assets/styles/'),
+      context,
+      templateSettings
+    );
 
-  //   this.fs.copyTpl(
-  //     this.templatePath('/assets/templates/'),
-  //     this.destinationPath('/assets/templates/'),
-  //     context,
-  //     templateSettings
-  //   );
+    this.fs.copyTpl(
+      this.templatePath('/assets/templates/'),
+      this.destinationPath('/assets/templates/'),
+      context,
+      templateSettings
+    );
 
-  //   this.fs.copyTpl(
-  //     this.templatePath('/assets/App.js'),
-  //     this.destinationPath('/assets/App.js'),
-  //     context,
-  //     templateSettings
-  //   );
+    this.fs.copyTpl(
+      this.templatePath('/assets/App.js'),
+      this.destinationPath('/assets/App.js'),
+      context,
+      templateSettings
+    );
 
-  //   // Copy some assets without templating
-  //   this.fs.copy(
-  //     this.templatePath('/assets/robots.txt'),
-  //     this.destinationPath('/assets/robots.txt')
-  //   );
+    // Copy some assets without templating
+    this.fs.copy(
+      this.templatePath('/assets/robots.txt'),
+      this.destinationPath('/assets/robots.txt')
+    );
 
-  //   this.fs.copy(
-  //     this.templatePath('/assets/images/'),
-  //     this.destinationPath('/assets/images/')
-  //   );
+    this.fs.copy(
+      this.templatePath('/assets/images/'),
+      this.destinationPath('/assets/images/')
+    );
 
-  //   this.fs.copy(
-  //     this.templatePath('/assets/fonts/'),
-  //     this.destinationPath('/assets/fonts/')
-  //   );
-  // },
+    this.fs.copy(
+      this.templatePath('/assets/fonts/'),
+      this.destinationPath('/assets/fonts/')
+    );
+  },
 
-  // /**
-  //  * Install server-side dependencies
-  //  */
-  // install: function () {
-  //   this.log("\n\n\n\nHurrah! " + thisUnicornName.rainbow + " is off to the races! Hold tight, this next part can take several minutes.\n\n");
-  //   this.installDependencies();
-  // }
+  /**
+   * Install server-side dependencies
+   */
+  install: function () {
+    this.log("\n\n\n\nHurrah! " + this.unicornName.rainbow + " is off to the races! Hold tight, this next part can take several minutes.\n\n");
+    this.installDependencies();
+  }
 
 });
  
