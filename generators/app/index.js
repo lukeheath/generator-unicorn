@@ -15,7 +15,7 @@ var colorPalette = {
     '50': '#ffebee',
     '100': '#ffcdd2',
     '200': '#ef9a9a',
-    '300': '#e57373',`
+    '300': '#e57373',
     '400': '#ef5350',
     '500': '#f44336',
     '600': '#e53935',
@@ -451,21 +451,6 @@ var UnicornGenerator = yeoman.generators.Base.extend({
    */
   write: function() { 
 
-    // Copy root config files
-    this.copy('.bowerrc', '.bowerrc');
-    this.copy('.editorconfig', '.editorconfig');
-    this.copy('.gitignore', '.gitignore');
-    this.copy('.sailsrc', '.sailsrc');
-    this.copy('app.js', 'app.js');
-    this.copy('bower.json', 'bower.json');
-    this.copy('Gruntfile.js', 'Gruntfile.js');
-    this.copy('package.json', 'package.json');
-    this.copy('README.md', 'README.md');
- 
-    // Prepare the template context for yeoman
-    
-  write: function() { 
-
     // Copy config files
     this.copy('.bowerrc', '.bowerrc');
     this.copy('.editorconfig', '.editorconfig');
@@ -530,12 +515,6 @@ var UnicornGenerator = yeoman.generators.Base.extend({
     );
 
     // Process assets folder as template
-    this.fs.copyTpl(
-      this.templatePath('/assets/fonts/'),
-      this.destinationPath('/assets/fonts/'),
-      context,
-      templateSettings
-    );
 
     this.fs.copyTpl(
       this.templatePath('/assets/js/'),
@@ -565,7 +544,7 @@ var UnicornGenerator = yeoman.generators.Base.extend({
       templateSettings
     );
 
-    // Copy asset images and robot without templating
+    // Copy some assets without templating
     this.fs.copy(
       this.templatePath('/assets/robots.txt'),
       this.destinationPath('/assets/robots.txt')
@@ -575,11 +554,16 @@ var UnicornGenerator = yeoman.generators.Base.extend({
       this.templatePath('/assets/images/'),
       this.destinationPath('/assets/images/')
     );
+
+    this.fs.copy(
+      this.templatePath('/assets/fonts/'),
+      this.destinationPath('/assets/fonts/')
+    );
   },
 
-  // /**
-  //  * Install server-side dependencies
-  //  */
+  /**
+   * Install server-side dependencies
+   */
   install: function () {
     this.log("\n\n\n\nHurrah! " + thisUnicornName.rainbow + " is off to the races! Hold tight, this next part can take several minutes.\n\n");
     this.installDependencies();
