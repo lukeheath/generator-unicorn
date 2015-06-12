@@ -1,10 +1,10 @@
 {
   "name": "generator-unicorn",
   "version": "0.0.0",
-  "description": "Yeoman generator",
+  "description": "Yeoman generator for the Unicorn web app starter seed",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "lukeheath/generator-unicorn",
+  "repository": "https://github.com/lukeheath/generator-unicorn",
   "author": {
     "name": "Luke Heath",
     "email": "",

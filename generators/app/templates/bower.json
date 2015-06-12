@@ -1,18 +1,17 @@
 {
   "name": "{#=unicorn.name#}",
   "version": "0.0.1",
-  "homepage": "https://github.com/lukeheath/unicorn",
+  "homepage": "https://github.com/",
   "authors": [
-    "Luke Heath <luke@lukeheath.com>"
+    ""
   ],
-  "description": "Searching for the perfect seed.",
+  "description": "A Sails / Angular app.",
   "main": "app.js",
   "keywords": [
     "Node",
     "Angular",
     "Sails",
-    "Treeline",
-    "NASTy"
+    "Treeline"
   ],
   "license": "MIT",
   "ignore": [
