@@ -21,7 +21,7 @@ module.exports = {
                     "success": function(pickRandomItem) {
                         return exits.respond({
                             data: {
-                                appName: "{#=unicorn.name#}",
+                                appName: "<%=unicorn.name%>",
                                 description: pickRandomItem
                             },
                             action: "display_view",

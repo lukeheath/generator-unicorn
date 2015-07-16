@@ -2,7 +2,7 @@
  * SignupCtrl
  *
  * @type {angular.controller}
- * @module  {#=unicorn.module#}
+ * @module  <%=unicorn.module%>
  * @description  The UI controller for user signup
  *
  *               ## Primary responsibilities:
@@ -10,7 +10,7 @@
  *
  */
 
-angular.module('{#=unicorn.module#}')
+angular.module('<%=unicorn.module%>')
 .controller('SignupCtrl', [
         '$window', '$scope', '$rootScope', '$state', '$location', 'uiMe', 'uiList', 'uiErrorBus', '_',
 function($window, $scope, $rootScope, $state, $location, uiMe , uiList, uiErrorBus, _) {

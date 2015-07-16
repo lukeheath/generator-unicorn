@@ -1,4 +1,4 @@
-angular.module('{#=unicorn.module#}').factory('uiErrorBus', [
+angular.module('<%=unicorn.module%>').factory('uiErrorBus', [
 /**
  * Module Dependencies
  */
@@ -11,7 +11,7 @@ function( $rootScope, $timeout  ) {
    * uiErrorBus
    *
    * @class        {angular.factory}
-   * @module       {#=unicorn.module#}
+   * @module       <%=unicorn.module%>
    * @type         {Function}
    * @description  An app-global singleton (aka "angular service") that manages a
    *               collection of any serious errors (e.g. network connection failure)

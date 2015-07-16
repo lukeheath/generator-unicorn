@@ -1,16 +1,16 @@
-<h1 class="md-display-2" hide show-gt-sm>{#=unicorn.name#}</h1>
+<h1 class="md-display-2" hide show-gt-sm><%=unicorn.name%></h1>
 <md-content id="home" layout-padding layout="row" layout-sm="column">
 
 	<div flex class="welcome">
 		<img src="/images/unicorn.gif">
-		<p class="md-body-1"><strong>{{ uiMe.username || 'Hooray' }}!</strong> Behold the magnificient {#=unicorn.name#}, a Sails / Angular app.</p>
+		<p class="md-body-1"><strong>{{ uiMe.username || 'Hooray' }}!</strong> Behold the magnificient <%=unicorn.name%>, a Sails / Angular app.</p>
 	</div>
 
 	<md-content flex class="why">
 	
-			<h1 class="md-display-2" hide-gt-sm>{#=unicorn.name#}</h1>
+			<h1 class="md-display-2" hide-gt-sm><%=unicorn.name%></h1>
 
-			<p class="md-body-1 lead">{#=unicorn.name#} is an Angular / Sails app generated from a magical starter seed, <a target="_lank" href="http://github.com/lukeheath/unicorn">Unicorn</a>.</p> It currently contains the following:
+			<p class="md-body-1 lead"><%=unicorn.name%> is an Angular / Sails app generated from a magical starter seed, <a target="_lank" href="http://github.com/lukeheath/unicorn">Unicorn</a>.</p> It currently contains the following:
 
 			<md-list>
 			  <md-list-item class="md-2-line">

@@ -1,4 +1,4 @@
-angular.module('{#=unicorn.module#}').uiObject('uiMe', [
+angular.module('<%=unicorn.module%>').uiObject('uiMe', [
 
 /**
  * Module Dependencies

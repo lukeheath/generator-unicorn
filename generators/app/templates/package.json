@@ -21,7 +21,7 @@
     "grunt-contrib-less": "0.11.1",
     "grunt-contrib-coffee": "~0.10.1"
   },
-  "name": "",
+  "name": "<%=unicorn.name%>",
   "private": true,
   "version": "0.0.1",
   "description": "a Sails application",

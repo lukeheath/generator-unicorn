@@ -1,4 +1,4 @@
-var theModule = angular.module('{#=unicorn.module#}');
+var theModule = angular.module('<%=unicorn.module%>');
 
 // quick hack to add a shortcut method for building uiObject factories
 theModule.uiObject = function (factoryId, definition) {

@@ -21,7 +21,7 @@
  *			Fetching it from one of your views, where it may be accessed as
  *			a local variable, e.g.:
  *			<form>
- *				<input type="hidden" name="_csrf" value="<%= _csrf %>" />
+ *				<input type="hidden" name="_csrf" value="<%%_csrf %>" />
  *			</form>
  *
  * or (b)	For AJAX/Socket-heavy and/or single-page apps:

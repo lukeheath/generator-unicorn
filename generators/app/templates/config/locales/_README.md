@@ -19,9 +19,9 @@ Locales can be accessed in controllers/policies through `res.i18n()`, or in view
 Remember that the keys are case sensitive and require exact key matches, e.g.
 
 ```ejs
-<h1> <%= __('Welcome to PencilPals!') %> </h1>
-<h2> <%= i18n('Hello %s, how are you today?', 'Pencil Maven') %> </h2>
-<p> <%= i18n('That\'s right-- you can use either i18n() or __()') %> </p>
+<h1> <%%= __('Welcome to PencilPals!') %> </h1>
+<h2> <%%= i18n('Hello %s, how are you today?', 'Pencil Maven') %> </h2>
+<p> <%%= i18n('That\'s right-- you can use either i18n() or __()') %> </p>
 ```
 
 ## Configuration

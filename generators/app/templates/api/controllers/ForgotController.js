@@ -49,10 +49,10 @@ module.exports = {
                                             "domain": "sandbox195a511ff2ee409ebc79f6c376c401c3.mailgun.org",
                                             "toEmail": (findOneUser && findOneUser.email),
                                             "toName": (findOneUser && findOneUser.username),
-                                            "subject": "{#=unicorn.name#} Password Recovery",
+                                            "subject": "<%=unicorn.name%> Password Recovery",
                                             "htmlMessage": "<h2 style=\"color:pink;\">Did you forget your password?</h2> <p style=\"color:purple;font-weight:bold;font-size:16px;\">If so, you can reset it at http://localhost:1337/#/reset/" + generateRandomAlphanumeric + "</p><h2 style=\"color:purple;\"><em>Hooray!</em></h2><img src=\"http://i.imgur.com/LHbMISf.gif?1\">",
-                                            "fromEmail": "donotreply@{#=unicorn.module#}.io",
-                                            "fromName": "{#=unicorn.name#} Recovery Service"
+                                            "fromEmail": "donotreply@<%=unicorn.module%>.io",
+                                            "fromName": "<%=unicorn.name%> Recovery Service"
                                         }).exec({
                                             "error": function(sendHtmlEmail) {
                                                 return exits.error({

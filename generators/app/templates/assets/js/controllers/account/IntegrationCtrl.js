@@ -2,7 +2,7 @@
  * IntegrationCtrl
  *
  * @type {angular.controller}
- * @module  {#=unicorn.module#}
+ * @module  <%=unicorn.module%>
  * @description  Handles social media integration login / signup
  *
  *               ## Primary responsibilities:
@@ -11,7 +11,7 @@
  *
  */
 
-angular.module('{#=unicorn.module#}')
+angular.module('<%=unicorn.module%>')
 .controller('IntegrationCtrl', [ '$scope', '$state', '$location', 'uiMe', 
 function($scope, $state, $location, uiMe) {
 
