@@ -80,7 +80,7 @@
                 <ul>
                   <% inputError.errors.forEach(function(err) { %>
                   <li>
-                  <%-err.inputKey ? ("<span class='key'>"+err.inputKey + ':</span>') : ''%>
+                  <%%-err.inputKey ? ("<span class='key'>"+err.inputKey + ':</span>') : ''%>
                   <%    if (err.code == 'E_INVALID_TYPE') { %>
                   Expected type <%=err.expected%>, but got: <%=err.actual%>.
                   <%    } else if (err.code == 'E_COERCION') { %>

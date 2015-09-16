@@ -2,7 +2,7 @@
  * ResetCtrl
  *
  * @type {angular.controller}
- * @module  <%=unicorn.module%>
+ * @module  <%=unicorn.module %>
  * @description  The UI controller for resetting forgotten passwords
  *
  *               ## Primary responsibilities:
@@ -10,7 +10,7 @@
  *
  */
 
-angular.module('<%=unicorn.module%>')
+angular.module('<%=unicorn.module %>')
 .controller('ResetCtrl', [
         '$scope', '$rootScope', '$state', '$stateParams', '$timeout', 'uiMe', 'uiList', 'uiErrorBus',
 function($scope, $rootScope, $state, $stateParams, $timeout, uiMe , uiList, uiErrorBus) {

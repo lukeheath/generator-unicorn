@@ -97,8 +97,9 @@ var UnicornGenerator = yeoman.generators.Base.extend({
     // Copy some config files without template processing
     this.copy('.bowerrc', '.bowerrc');
     this.copy('.editorconfig', '.editorconfig');
-    this.copy('gitignore', '.gitignore');
+    this.copy('.gitignore', '.gitignore');
     this.copy('.sailsrc', '.sailsrc');
+    this.copy('postinstall.js', 'postinstall.js');
     this.copy('app.js', 'app.js');
     this.copy('Gruntfile.js', 'Gruntfile.js');
 
@@ -109,6 +110,9 @@ var UnicornGenerator = yeoman.generators.Base.extend({
         color: this.colors
       }
     };
+
+     // Set lowercase module name based on unicorn's name
+    context.unicorn.module = this.unicornName.toLowerCase();
 
     // Process some config files as templates
     this.fs.copyTpl(
@@ -126,46 +130,8 @@ var UnicornGenerator = yeoman.generators.Base.extend({
       this.destinationPath('README.md'),
       context
     );
-    
-    // Set lowercase module name based on unicorn's name
-    context.unicorn.module = this.unicornName.toLowerCase();
-
-    this.fs.copyTpl(
-      this.templatePath('views/layout.ejs'),
-      this.destinationPath('views/layout.ejs'),
-      context
-    );
-
-    // Process Sails API folder as template
-    this.fs.copyTpl(
-      this.templatePath('api/'),
-      this.destinationPath('api/'),
-      context
-    );
-
-    // Process Sails config folder as template
-    this.fs.copyTpl(
-      this.templatePath('config/'),
-      this.destinationPath('config/'),
-      context
-    );
-
-    // Process grunt tasks folder as template
-    this.fs.copyTpl(
-      this.templatePath('tasks/'),
-      this.destinationPath('tasks/'),
-      context
-    );
-
-    // Process Sails/EJS views folder as template
-    this.fs.copyTpl(
-      this.templatePath('views/'),
-      this.destinationPath('views/'),
-      context
-    );
 
     // Process assets folder as template
-
     this.fs.copyTpl(
       this.templatePath('assets/js/'),
       this.destinationPath('assets/js/'),
@@ -190,7 +156,28 @@ var UnicornGenerator = yeoman.generators.Base.extend({
       context
     );
 
-    // Copy some assets without templating
+    this.fs.copyTpl(
+      this.templatePath('views/'),
+      this.destinationPath('views/'),
+      context
+    );
+
+    // Copy remaining without processing
+    this.fs.copy(
+      this.templatePath('api/'),
+      this.destinationPath('api/')
+    );
+
+    this.fs.copy(
+      this.templatePath('config/'),
+      this.destinationPath('config/')
+    );
+
+    this.fs.copy(
+      this.templatePath('tasks/'),
+      this.destinationPath('tasks/')
+    );
+
     this.fs.copy(
       this.templatePath('assets/robots.txt'),
       this.destinationPath('assets/robots.txt')
@@ -200,11 +187,7 @@ var UnicornGenerator = yeoman.generators.Base.extend({
       this.templatePath('assets/images/'),
       this.destinationPath('assets/images/')
     );
-
-    this.fs.copy(
-      this.templatePath('assets/fonts/'),
-      this.destinationPath('assets/fonts/')
-    );
+    
   },
 
   /**

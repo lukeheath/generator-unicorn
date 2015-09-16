@@ -2,7 +2,7 @@
  * ForgotCtrl
  *
  * @type {angular.controller}
- * @module  <%=unicorn.module%>
+ * @module  <%=unicorn.module %>
  * @description  The UI controller for forgot password
  *
  *               ## Primary responsibilities:
@@ -10,7 +10,7 @@
  *
  */
 
-angular.module('<%=unicorn.module%>')
+angular.module('<%=unicorn.module %>')
 .controller('ForgotCtrl', [
         '$scope', '$rootScope', '$state', '$timeout', 'uiMe', 'uiList', 'uiErrorBus',
 function($scope, $rootScope, $state, $timeout, uiMe , uiList, uiErrorBus) {

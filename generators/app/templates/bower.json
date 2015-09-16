@@ -1,17 +1,18 @@
 {
-  "name": "<%=unicorn.name%>",
+  "name": "<%=unicorn.name %>",
   "version": "0.0.1",
-  "homepage": "https://github.com/",
+  "homepage": "https://github.com/lukeheath/<%=unicorn.module %>",
   "authors": [
-    ""
+    "Luke Heath <luke@lukeheath.com>"
   ],
-  "description": "A Sails / Angular app.",
+  "description": "Searching for the perfect seed.",
   "main": "app.js",
   "keywords": [
     "Node",
     "Angular",
     "Sails",
-    "Treeline"
+    "Treeline",
+    "NASTy"
   ],
   "license": "MIT",
   "ignore": [
@@ -22,12 +23,14 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.4.0",
-    "angular-animate": "~1.4.0",
-    "angular-aria": "~1.4.0",
-    "angular-material": "~0.9.6",
-    "angular-touch": "~1.4.0",
+    "angular": "~1.4.5",
+    "angular-animate": "~1.4.5",
+    "angular-aria": "~1.4.5",
+    "angular-material": "~0.10.1",
+    "angular-material-icons": "~0.5.0",
+    "angular-touch": "~1.4.5",
     "angular-ui-router": "~0.2.15",
-    "lodash": "~3.9.3"
+    "lodash": "~3.10.1",
+    "svg-morpheus": "~0.1.8"
   }
 }

@@ -13,15 +13,15 @@ var dependencies = [
 
 
 /**
- * <%=unicorn.name%>
+ * <%=unicorn.name %>
  *
  * @class        {angular.module}
- * @module       <%=unicorn.name%>
+ * @module       <%=unicorn.name %>
  * @type         {Function}
  * @description  An angular module for a web UI.
  */
 
-angular.module('<%=unicorn.module%>', dependencies);
+angular.module('<%=unicorn.module %>', dependencies);
 
 
 
@@ -44,7 +44,7 @@ angular.module('<%=unicorn.module%>', dependencies);
 
 ////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
-var theModule = angular.module('<%=unicorn.module%>');
+var theModule = angular.module('<%=unicorn.module %>');
 ////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
 

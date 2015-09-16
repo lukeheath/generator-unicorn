@@ -1,4 +1,4 @@
-var theModule = angular.module('<%=unicorn.module%>');
+var theModule = angular.module('<%=unicorn.module %>');
 
 // Adds a shortcut method for building uiArray factories
 theModule.uiArray = function (factoryId, definition) {

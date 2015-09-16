@@ -2,7 +2,7 @@
  * ProfileCtrl
  *
  * @type {angular.controller}
- * @module  <%=unicorn.module%>
+ * @module  <%=unicorn.module %>
  * @description  The UI controller for the user profile
  *
  *               ## Primary responsibilities:
@@ -11,7 +11,7 @@
  *
  */
 
-angular.module('<%=unicorn.module%>')
+angular.module('<%=unicorn.module %>')
 .controller('ProfileCtrl', [
         '$scope', '$rootScope', '$state', '$timeout', 'uiMe', 'uiList', 'uiErrorBus',
 function($scope, $rootScope, $state, $timeout, uiMe , uiList, uiErrorBus) {

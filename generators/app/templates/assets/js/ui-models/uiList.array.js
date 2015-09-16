@@ -1,4 +1,4 @@
-angular.module('<%=unicorn.module%>').uiArray('uiList', [
+angular.module('<%=unicorn.module %>').uiArray('uiList', [
 
 /**
  * Module Dependencies

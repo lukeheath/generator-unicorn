@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%=unicorn.name%></title>
+    <title><%=unicorn.name %></title>
 
     <!-- Viewport mobile tag for sensible mobile support -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -30,7 +30,8 @@
     -->
 
     <!--STYLES-->
-    <link rel="stylesheet" href="/styles/bower/angular-material/angular-material.css">
+    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" href="/bower_components/angular-material-icons/angular-material-icons.css">
     <link rel="stylesheet" href="/styles/importer.css">
     <!--STYLES END-->
   </head>
@@ -94,12 +95,14 @@
     <script src="/bower_components/angular-animate/angular-animate.js"></script>
     <script src="/bower_components/angular-aria/angular-aria.js"></script>
     <script src="/bower_components/angular-material/angular-material.js"></script>
+    <script src="/bower_components/angular-material-icons/angular-material-icons.js"></script>
     <script src="/bower_components/angular-touch/angular-touch.js"></script>
     <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="/bower_components/lodash/lodash.js"></script>
+    <script src="/bower_components/svg-morpheus/compile/unminified/svg-morpheus.js"></script>
     <script src="/js/dependencies/other/cloudsdk.js"></script>
     <script src="/js/dependencies/other/sails.io.js"></script>
-    <script src="/js/unicorn.module.js"></script>
+    <script src="/js/<%=unicorn.module %>.module.js"></script>
     <script src="/js/cloud.js"></script>
     <script src="/js/ui-models/uiArray.array.js"></script>
     <script src="/js/ui-models/uiObject.object.js"></script>
@@ -115,7 +118,7 @@
     <script src="/js/ui-models/uiErrorBus.object.js"></script>
     <script src="/js/ui-models/uiList.array.js"></script>
     <script src="/js/ui-models/uiMe.object.js"></script>
-    <script src="/js/unicorn.routes.js"></script>
+    <script src="/js/<%=unicorn.module %>.routes.js"></script>
     <!--SCRIPTS END-->
   </body>
 </html>

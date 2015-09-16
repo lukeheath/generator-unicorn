@@ -1,4 +1,4 @@
-angular.module('<%=unicorn.module%>')
+angular.module('<%=unicorn.module %>')
 
 // Configure UI Router
 .config([

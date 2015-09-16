@@ -2,7 +2,7 @@
  * AppCtrl
  *
  * @type {angular.controller}
- * @module  <%=unicorn.module%>
+ * @module  <%=unicorn.module %>
  * @description  The UI container for the application experience.
  *
  *               ## Primary responsibilities:
@@ -10,17 +10,25 @@
  *
  */
 
-angular.module('<%=unicorn.module%>')
+angular.module('<%=unicorn.module %>')
 .controller('AppCtrl', [
-        '$scope', '$rootScope', '$state', '$q', '$mdSidenav', 'uiMe', 'uiList', 'uiErrorBus',
-function($scope, $rootScope, $state, $q, $mdSidenav, uiMe, uiList, uiErrorBus) {
+        '$scope', '$rootScope', '$state', '$q', '$mdSidenav', '$mdTheming', 'uiMe', 'uiList', 'uiErrorBus',
+function($scope, $rootScope, $state, $q, $mdSidenav, $mdTheming, uiMe, uiList, uiErrorBus) {
 
   window.uiMe = uiMe;
   $scope.uiMe = uiMe;
 
+  window.theme = $mdTheming;
+
   //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
   // When the application is initially rendered
   //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+
+  // Make colors available to templates for SVG icons
+  $scope.mdColors = {
+    primary: '<%=unicorn.color.primary.palette[500] %>',
+    accent: '<%=unicorn.color.accent.palette[400] %>'
+  };
 
   // Create promise for app ready state
   var appReady = $q.defer();

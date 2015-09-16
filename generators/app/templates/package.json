@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "machine": "~4.0.4",
+    "machine": "~11.0.3",
     "sails-hook-machines": "~1.0.11",
     "sails": "~0.11.0",
     "sails-disk": "~0.10.0",
@@ -21,7 +21,7 @@
     "grunt-contrib-less": "0.11.1",
     "grunt-contrib-coffee": "~0.10.1"
   },
-  "name": "<%=unicorn.name%>",
+  "name": "<%=unicorn.module %>-treeline",
   "private": true,
   "version": "0.0.1",
   "description": "a Sails application",
@@ -33,8 +33,8 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/"
+    "url": "git://github.com/luke/<%=unicorn.module %>-treeline.git"
   },
-  "author": "",
+  "author": "luke",
   "license": ""
 }

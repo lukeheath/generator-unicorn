@@ -2,7 +2,7 @@
  * LoginCtrl
  *
  * @type {angular.controller}
- * @module  <%=unicorn.module%>
+ * @module  <%=unicorn.module %>
  * @description  The UI controller for user login
  *
  *               ## Primary responsibilities:
@@ -10,7 +10,7 @@
  *
  */
 
-angular.module('<%=unicorn.module%>')
+angular.module('<%=unicorn.module %>')
 .controller('LoginCtrl', [
         '$scope', '$rootScope', '$state', '$timeout', 'uiMe', 'uiList', 'uiErrorBus',
 function($scope, $rootScope, $state, $timeout, uiMe , uiList, uiErrorBus) {
@@ -51,7 +51,6 @@ function($scope, $rootScope, $state, $timeout, uiMe , uiList, uiErrorBus) {
       .finally(function eitherWay(){
         uiMe.syncing.form = false;
       });
-
     }
 
   });
