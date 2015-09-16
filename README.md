@@ -17,7 +17,7 @@ It creates unicorns.
 Install the generator:
 
 ```bash
-yo install generator-unicorn
+npm install -g generator-unicorn
 ```
 
 Run the generator:
