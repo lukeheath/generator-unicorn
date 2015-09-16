@@ -97,7 +97,7 @@ var UnicornGenerator = yeoman.generators.Base.extend({
     // Copy some config files without template processing
     this.copy('.bowerrc', '.bowerrc');
     this.copy('.editorconfig', '.editorconfig');
-    this.copy('.gitignore', '.gitignore');
+    this.copy('gitignore', '.gitignore');
     this.copy('.sailsrc', '.sailsrc');
     this.copy('postinstall.js', 'postinstall.js');
     this.copy('app.js', 'app.js');

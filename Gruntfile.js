@@ -114,7 +114,15 @@ module.exports = function(grunt) {
 					dest: 'generators/app/templates/assets/styles/styleguide/colors.less'
 				}
     		]
-    	}
+    	},
+        gruntfile: {
+            files: [
+                {
+                    src: ['generators/app/templates/.gitignore'],
+                    dest: 'generators/app/templates/gitignore'
+                }
+            ]
+        }
     },
   });
 
