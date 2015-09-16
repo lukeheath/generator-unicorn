@@ -1,6 +1,6 @@
 {
   "name": "generator-unicorn",
-  "version": "0.0.6rev1",
+  "version": "0.0.6-rev1",
   "description": "Yeoman generator for the Unicorn Sails/Angular starter seed.",
   "license": "MIT",
   "main": "app/index.js",
