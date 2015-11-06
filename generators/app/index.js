@@ -151,12 +151,6 @@ var UnicornGenerator = yeoman.generators.Base.extend({
     );
 
     this.fs.copyTpl(
-      this.templatePath('assets/App.js'),
-      this.destinationPath('assets/App.js'),
-      context
-    );
-
-    this.fs.copyTpl(
       this.templatePath('views/'),
       this.destinationPath('views/'),
       context
