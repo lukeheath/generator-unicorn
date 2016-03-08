@@ -1,12 +1,12 @@
-<md-content id="home">
+<div id="home">
 
-	<h1 class="md-display-2" hide show-gt-sm><%=unicorn.name %></h1>
+	<h1 class="md-display-2 title" hide show-gt-sm><%=unicorn.name %></h1>
 
-	<md-content layout="row" layout-sm="column" layout-padding>
+	<div layout="row" layout-sm="column" layout-padding>
 
-		<div flex flex-gt-md="40" class="welcome">
+		<div layout="column" flex flex-gt-md="40" class="welcome">
 			<img src="/images/sparklehorse.gif">
-			<p class="md-body-1"><strong>{{ uiMe.username || 'Hooray' }}!</strong> You've found <%=unicorn.name %>, a Treeline / Angular seed.</p>
+			<p class="md-body-1 text-center"><strong>{{ uiMe.username || 'Behold' }}!</strong> Something majestic! It's <%=unicorn.name %>. A Sails / Angular seed.</p>
 		</div>
 
 		<div flex flex-gt-md="60" class="why">
@@ -45,13 +45,13 @@
 				    <md-checkbox aria-label="Yeoman generator" ng-model="item.yeoman" ng-init="item.yeoman = true"></md-checkbox>
 				    <div class="md-list-item-text">
 				      <h3><strong>Yeoman Generator</strong></h3>
-				      <p><a target="_blank" href="https://www.npmjs.com/package/generator-unicorn">Yeoman Unicorn Generator</a> makes spinning up new projects a breeze.</p>
+				      <p><a target="_blank" href="https://www.npmjs.com/package/generator-unicorn">Yeoman Generator</a> makes spinning up new projects a breeze.</p>
 				    </div>
 				  </md-list-item>
 				</md-list>
 
 		</div>
 
-	</md-content>
+	</div>
 
-</md-content>
+</div>
